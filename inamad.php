@@ -104,13 +104,13 @@ class iNamad extends Module
                     'size' => 80,
                     'required' => true
                 ),
-				array(
-					'type' => 'text',
-					'label' => $this->l('Namad Zoom out'),
-					'name' => 'namad_text',
-					'size' => 2,
-					'required' => true
-				),
+		array(
+			'type' => 'text',
+			'label' => $this->l('Namad Zoom out'),
+			'name' => 'namad_zoom',
+			'size' => 2,
+			'required' => true
+		),
                 array(
                     'type' => 'text',
                     'label' => $this->l('Namad width'),
@@ -199,7 +199,7 @@ class iNamad extends Module
         $helper->fields_value['namad_width'] = Configuration::get('PSI_ENAMAD_W');
         $helper->fields_value['namad_height'] = Configuration::get('PSI_ENAMAD_H');
         $helper->fields_value['namad_position'] = Configuration::get('PSI_ENAMAD_POSITION');
-		//$helper->fields_value['namad_zoom'] = Configuration::get('PSI_ENAMAD_ZOOM');
+	$helper->fields_value['namad_zoom'] = Configuration::get('PSI_ENAMAD_ZOOM');
 
         return $helper->generateForm($fields_form);
     }
